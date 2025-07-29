@@ -115,12 +115,103 @@ nav {
 
 }
 
-.nav-button:hover {
+.nav-button:hover, .form-button:hover {
     background-color: var(--couleur-midclaire);
     color: var(--couleur-midfonce);
     border: solid var(--couleur-midfonce) 2px;
     
 }
+
+/*Formulaire de connexion*/
+
+#connect-box {
+    z-index : 20;
+    position : fixed;
+    width : 35vw;
+    height : 20vh;
+    top : 40vh;
+    left : 30vw;
+
+    background-color: var(--couleur-claire);
+    color: (var(--couleur-midfonce));
+    border: var(--couleur-midfonce) 1px solid;
+    border-radius: 10px;
+
+    box-shadow: black 2px 2px 4px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+
+    padding: 1vh 2vw;
+}
+
+
+
+.connect-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+
+.connect-line>label {
+    font-size: 1.4rem;
+    font-weight: 800;
+    
+}
+
+.connect-line>input {    
+    
+    border-radius: 3px;
+    width : 70%;
+    font-size: 1.4rem;
+    padding: 5px;
+}
+
+
+.form-button {
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: block;
+    max-width : 30%;
+    background-color: var(--couleur-fonce);
+    color: var(--couleur-claire);
+    padding: 10px 25px;
+
+    
+    margin : 5px;
+
+    text-align: center;
+    border-radius: 5px;
+    border: solid var(--couleur-claire) 2px;
+    transition: background-color 300ms, color 500ms, border 500ms;
+}
+
+#connect-close {
+    position: absolute;
+    right: 0vh;
+    top : -4.5vh;
+    height: 3.5vh;
+    aspect-ratio: 1;
+
+    background-color: var(--couleur-claire);
+    color: (var(--couleur-midfonce));
+    border: var(--couleur-midfonce) 1px solid;
+    border-radius: 10%;
+
+    box-shadow: black 2px 2px 4px 0;
+
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+
+    user-select: none;
+}
+
+
 
 /*réglage de la partie main et aside*/
 p {
@@ -149,11 +240,6 @@ article {
     box-shadow: var(--couleur-fonce) 2px 2px 5px 0;
     padding: 10px;
     margin-bottom: 10px;
-    transition: transform 1000ms;
-}
-
-article:hover {
-    transform: translate3d(2vh, 2vh, 0);
     
 }
 
@@ -246,7 +332,9 @@ h4 {
     font-family: "police-titre";
     color: var(--couleur-claire);
     margin-right: 30px;
+    
 }
+
 
 /* la page game.htm*/
 
