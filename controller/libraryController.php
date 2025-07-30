@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     $pageTitle = "Des livres et des histoires!";
     $pageSubtitle = "La bibliothèque de l'E2C";
     $navList = [

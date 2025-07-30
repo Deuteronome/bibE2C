@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="icon" href="../src/logo.png">
     <script src="../script/news.js" defer></script>
+    <script src="../script/connect.js" defer></script>
+    <script src="../script/flash.js" defer></script>
 </head>
 <body>
     
@@ -18,6 +20,13 @@
     <?php
         require_once("../view/_partials/_nav.php");
         require_once("../view/_partials/_header.php");
+        require_once("../view/_partials/_connect.php");
+        if(isset($_GET["message"])) {
+            require_once("../view/_partials/_flashMessage.php");
+        }
+        if(isset($_SESSION["userId"])) {
+            require_once("../view/_partials/_footer.php");
+        }
     ?>
     <!-- Zone peincipale - présentation de l'e2c et de Silence, On lit-->
     <div id="rangement">
@@ -89,21 +98,7 @@
     </div>
 
     
-    <form id="connect-box" action="../controller/loginController.php" method="post">
-        <div id="connect-close">x</div>
-        <div class="connect-line">
-            <label for="email">email</label>
-            <input type="mail" id="email" name="email" required>
-        </div>
-        <div class="connect-line">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div class="connect-line">
-            <div></div>
-            <input type="submit" value="Envoyer" class="form-button">
-        </div>
-    </form>
+    
   
 </body>
 </html>
